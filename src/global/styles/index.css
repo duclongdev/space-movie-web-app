@@ -1,6 +1,6 @@
 @tailwind base;
 @layer base {
   body{
-    @apply bg-slate-500
+    @apply dark:bg-black bg-white
   }
 }
