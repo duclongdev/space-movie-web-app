@@ -7,6 +7,6 @@ const publicRoutes = [
   { path: "/", component: Home },
   { path: "/play", component: Play },
   {path: "/search", component: Search},
-  {path: "/favorite", component: Favorite}
+  {path: "/favorite", component: Favorite, layout: null}
 ];
 export {publicRoutes};
