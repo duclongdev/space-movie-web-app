@@ -1,6 +1,0 @@
-@tailwind base;
-@layer base {
-  body{
-    @apply dark:bg-black bg-white
-  }
-}
