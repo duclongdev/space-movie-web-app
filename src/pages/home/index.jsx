@@ -1,11 +1,47 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./home.css";
+import SummaryInfo from "../../components/summaryInfo";
+import Slider from "react-slick";
+import { NextIcon, PreIcon } from "../../assets";
+import ListMovie from "../../components/listMovie";
+
+const PrA = (props) => {
+  const { className, onClick, size } = props;
+
+  return (
+    <div onClick={onClick} className={className}>
+      <PreIcon size={size} />
+    </div>
+  );
+};
+
+const NeA = (props) => {
+  const { className, onClick } = props;
+  return (
+    <div onClick={onClick} className={className}>
+      <NextIcon />
+    </div>
+  );
+};
 
 const Home = () => {
-  const { t } = useTranslation();
   return (
-    <div >
-      <h2>{t("Home")} </h2>
+    <div className="backdrop-blur-3xl-sm relative overflow-x-hidden">
+      <Slider
+        dots
+        infinite
+        initialSlide={2}
+        prevArrow={<PrA size={"h-10 w-10"} />}
+        nextArrow={<NeA />}
+        pauseOnHover={true}
+      >
+        <SummaryInfo />
+        <SummaryInfo />
+        <SummaryInfo />
+      </Slider>
+      <ListMovie />
     </div>
   );
 };
