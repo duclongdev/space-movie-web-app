@@ -7,7 +7,7 @@ const Search = () => {
   const [message, setMessage] = useState("");
   const { t } = useTranslation();
   return (
-    <div className="w-96 rounded-3xl border focus-within:border-green-500 flex items-center justify-between bg-gray-100">
+    <div className="search-container">
       <div className="flex-1">
         <input
           type="text"
@@ -18,7 +18,7 @@ const Search = () => {
         />
       </div>
       <span className="bg-gray-400 w-px h-4/6"></span>
-      <button className="bg-gray-100 w-12 h-full rounded-r-3xl flex justify-center items-center hover:bg-gray-200 active:bg-gray-300">
+      <button className="btn-search">
         <SearchIcon strokerColor={message.length === 0 ? "gray" : "black"} />
       </button>
     </div>

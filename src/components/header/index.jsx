@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { HeaderBtn } from "../button";
 import { LogoBtn } from "../button";
@@ -8,13 +8,24 @@ import Search from "../search";
 
 const Header = () => {
   const { t } = useTranslation();
+  const [isScrolled, setIsScrolled] = useState(false);
+  window.onscroll = () => {
+    setIsScrolled(window.pageYOffset === 0 ? false : true);
+    return () => (window.onscroll = null);
+  };
   return (
-    <div className="flex flex-row place-content-between px-16 py-2">
+    <div
+      className={
+        isScrolled
+          ? "flex flex-row place-content-between px-14 py-2 w-full fixed z-20 bg-white dark:bg-slate-800 "
+          : "flex flex-row place-content-between px-14 py-2 w-full fixed z-20 bg-gradient-to-b from-slate-800"
+      }
+    >
       <div className="flex flex-row">
         <LogoBtn />
         <SwitchModeBtn />
       </div>
-     <Search />
+      <Search />
       <div>
         <div className="flex flex-row">
           <ChangeLangBtn />
