@@ -21,8 +21,6 @@ const Play = () => {
   const episode = "Episode";
 
   return (
-    // <div className="bg-slate-900">Play</div>
-
     <div className="container mx-auto pt-4">
       <div className="grid grid-cols-4 gap-5 mb-4">
         <div className="col-span-3">
