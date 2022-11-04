@@ -8,7 +8,7 @@ module.exports = {
       container: {
         center: true,
         padding: {
-          DEFAULT: '6rem',
+          DEFAULT: '5rem',
         }
       },
       
@@ -16,5 +16,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/line-clamp'),
+    require('tailwind-scrollbar'),
+    require('tailwind-scrollbar')({ nocompatible: true }),
   ],
 };

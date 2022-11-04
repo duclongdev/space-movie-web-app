@@ -5,7 +5,7 @@ const TitleBar = ({ filmName, episodes}) => {
 
     const handleMouseOver = () => {
         setIsHovering(true);
-      };
+    };
     
     const handleMouseOut = () => {
     setIsHovering(false);
@@ -18,7 +18,7 @@ const TitleBar = ({ filmName, episodes}) => {
                     {filmName}
                 </span>
 
-                <span className="absolute inline-flex items-center bg-gradient-to-r from-white text-lg h-[100%] transition-style overflow-hidden dark:from-slate-800" style={{width : isHovering ? "100px" : "0px"}}>
+                <span className="absolute inline-flex items-center bg-gradient-to-r from-white text-lg h-[100%] transition-style overflow-hidden dark:from-slate-800" style={{width : isHovering ? "120px" : "0px"}}>
                     <span className="text-green-500 font-bold absolute text-lg top-1 ml-2">
                         more info
                     </span>
@@ -28,7 +28,7 @@ const TitleBar = ({ filmName, episodes}) => {
                         viewBox="0 0 24 24"
                         strokeWidth="1.5"
                         stroke="currentColor"
-                        className="w-5 h-5 ml-24">
+                        className="w-5 h-5 ml-[94px]">
                         <path
                         strokeLinecap="round"
                         strokeLinejoin="round"

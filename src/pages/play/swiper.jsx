@@ -7,9 +7,16 @@ import { Navigation } from "swiper";
 import { useState } from "react";
 
 const data = ["1-60", "61-120", "121-180", "181-240", "241-271"];
+var curValue = 0;
+
 
 const My_Swiper = () => {
   const [current, setCurrent] = useState(0);
+
+  const handleClick = (index) => {
+    setCurrent(index);
+    curValue = current;
+};
 
   return (
     <div className="khung-slider flex items-center mt-4 dark:text-gray-200 ">
@@ -46,7 +53,7 @@ const My_Swiper = () => {
             classes += " text-green-500 underline decoration-2";
           return (
             <SwiperSlide key={index}>
-              <div className={classes} onClick={() => setCurrent(index)}>
+              <div className={classes} onClick={() => handleClick(index)}>
                 {value}
               </div>
             </SwiperSlide>
@@ -75,3 +82,4 @@ const My_Swiper = () => {
 };
 
 export default My_Swiper;
+export {curValue};
