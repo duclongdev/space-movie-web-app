@@ -6,12 +6,14 @@ import SummaryInfo from "../../components/summaryInfo";
 import Slider from "react-slick";
 import { NextIcon, PreIcon } from "../../assets";
 import ListMovie from "../../components/listMovie";
+import data from "../../assets/data/homeBaner";
 
 const PrA = (props) => {
   const { className, onClick, size } = props;
 
   return (
     <div onClick={onClick} className={className}>
+      {console.log(props)}
       <PreIcon size={size} />
     </div>
   );
@@ -28,7 +30,7 @@ const NeA = (props) => {
 
 const Home = () => {
   return (
-    <div className="backdrop-blur-3xl-sm relative overflow-x-hidden">
+    <div className="backdrop-blur-3xl-sm overflow-x-hidden relative">
       <Slider
         dots
         infinite
@@ -37,11 +39,13 @@ const Home = () => {
         nextArrow={<NeA />}
         pauseOnHover={true}
       >
-        <SummaryInfo />
-        <SummaryInfo />
-        <SummaryInfo />
+        {data.map((e, index) => {
+          return <SummaryInfo key={index} data={e} />;
+        })}
       </Slider>
+      <div className="bg-red w-20 h-20 absolute z-50 top-0"></div>
       <ListMovie />
+      <div className="w-12 h-64"></div>
     </div>
   );
 };

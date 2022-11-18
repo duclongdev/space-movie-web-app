@@ -1,63 +1,42 @@
-import React, { useState } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import { NextIcon, PreIcon } from "../../assets";
-import Card from "../../components/card";
+import React from "react";
+import Card from "../card";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "./index.css";
+import { Navigation } from "swiper";
+import data from "../../assets/data/listMovie.js";
 
-const PrA = (props) => {
-  const { onClick, size } = props;
-  const currentSlide = 0;
-
-  return (
-    <div>
-      {(currentSlide == props.currentSlide) == 0 ? (
-        <div onClick={onClick} className="absolute left-[-2rem] top-1/3 z-50">
-          <PreIcon size={size} />
-        </div>
-      ) : (
-        <></>
-      )}
-    </div>
-  );
-};
-
-const NeA = (props) => {
-  const { onClick, size } = props;
-  console.log(props.currentSlide);
-  console.log(((14 - 1) / 6) * 6);
-  return (
-    <div>
-      {props.currentSlide == Math.floor((7 - 1) / 6) * 6 ? (
-        <></>
-      ) : (
-        <div onClick={onClick} className="absolute right-[-0.3rem] top-1/3">
-          <NextIcon size={size} />
-        </div>
-      )}
-    </div>
-  );
-};
 const ListMovie = () => {
-  const size = 12;
   return (
-    <div className="relative top-[-8rem] mx-14 ">
-      <h1 className="text-3xl text-white mb-4 pt-8 w-full">Trending</h1>
-      <Slider
-        slidesToShow={6}
-        adaptiveHeight={true}
-        slidesToScroll={6}
-        prevArrow={<PrA size={"h-5 w-5"} />}
-        nextArrow={<NeA size={"h5- w-5"} />}
-      >
-        <Card count={0} />
-        <Card count={1} />
-        <Card count={2} />
-        <Card count={3} />
-        <Card count={4} />
-        <Card count={5} />
-        <Card count={6} />
-      </Slider>
+    <div >
+      {data.map((e, index) => (
+        <div
+          key={index}
+          className="flex mx-14 justify-around relative top-[-5rem] mb-20"
+        >
+          <h1 className="absolute left-0 text-white top-[-2rem]   ">
+            {e.title}
+          </h1>
+          <Swiper
+            slidesPerView={6}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            className="pl-4 ml-[-2rem]"
+            modules={[Navigation]}
+          >
+            {e.movies.map((movie, index) => (
+              <SwiperSlide key={index}>
+                <Card data={movie} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      ))}
     </div>
   );
 };

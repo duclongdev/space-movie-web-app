@@ -1,7 +1,9 @@
 @import "tailwindcss/base";
+@import "base/index";
 
 @import "tailwindcss/components";
-@import "components/button/button";
-@import "components/search/search";
+@import "components/button/index";
+@import "components/search/index";
+@import "components/header/index";
 
 @import "tailwindcss/utilities";

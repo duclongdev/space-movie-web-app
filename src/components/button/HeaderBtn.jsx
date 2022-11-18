@@ -32,7 +32,6 @@ const HeaderBtn = ({ name, type }) => {
             d={type === "History" ? historyIcon : userIcon}
           />
         </svg>
-
         <span className="text-xs">{name}</span>
       </button>
     </div>
