@@ -21,17 +21,17 @@ const yearFilm = [
 const Detail = () => {
   return (
     <>
-      <div className="text-white mx-16">
+      <div className="text-white mx-16 pt-16">
         <div className="absolute w-full top-0 right-0 -z-10 flex justify-end">
           <div className="flex-1 bg-[#1e293b]"></div>
           <div className="relative">
-            <img src="/assets/1.jpg" alt="banner" />
+            <img className="h-[740px]" src="/assets/1.jpg" alt="banner" />
             <div className="absolute w-[52%] h-full top-0 left-0 overlay-left"></div>
             <div className="absolute w-full h-[36%] bottom-0 left-0 overlay-bottom"></div>
           </div>
         </div>
         <h2 className="font-bold text-3xl mt-8">BORUNO-NARUTO NEXT<br /> GENERATIONS-</h2>
-        <button className="bg-orange-500 font-medium px-2 rounded mt-3 mb-2">IQIYI Only</button>
+        <button className="bg-orange-500 font-medium px-2 rounded mt-3 mb-2">SPACE Only</button>
         <div className="flex font-medium text-l my-2">
           <div className="flex">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#00dc5a" className="w-5 h-5">

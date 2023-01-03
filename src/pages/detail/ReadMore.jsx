@@ -9,7 +9,7 @@ const ReadMore = ({ children }) => {
     return (
         <>
             <div className="read-more-read-less w-[38%] mt-3">
-                <div className='overflow-hidden' style={{ maxHeight: isMore ? undefined : "50px" }}>
+                <div className='overflow-hidden' style={{ maxHeight: isMore ? undefined : "60px" }}>
                     <p className='text-[#A9A9AC]'>Description: <span className='text-white'>{children} </span></p>
                 </div>
                 <button className='text-[#00dc5a] font-bold mt-1 flex items-center' onClick={toggleBtn} >
