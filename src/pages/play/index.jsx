@@ -23,7 +23,7 @@ const Play = () => {
   const episode = "Episode";
 
   return (
-    <div className="container pt-20">
+    <div className="container pt-20 pl-10 pr-14">
       <div className="grid grid-cols-4 gap-y-4 mb-4">
         <div className="col-span-3">
           <video width="100%" height="100%" controls className="rounded-l-md">

@@ -5,13 +5,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: '5rem',
-        }
+      colors: {
+        'forDark': '#10111A',
       },
-      
     },
   },
   plugins: [
