@@ -81,10 +81,10 @@ const LeftShort = () => {
             navigate("/short")
         }
         else if (type === tabs[1].nameTab) {
-            navigate("/")
+            navigate("/postdetail")
         }
         else {
-            navigate("/play")
+            navigate("/watchlist")
         }
     }, [type])
 
@@ -100,7 +100,7 @@ const LeftShort = () => {
                             style={
                                 type === value.nameTab ?
                                     {
-                                        color: "#F44336"
+                                        color: "#04DB41"
                                     } :
                                     {
 
@@ -111,7 +111,7 @@ const LeftShort = () => {
                             style={
                                 type === value.nameTab ?
                                     {
-                                        color: "#F44336"
+                                        color: "#04DB41"
                                     } :
                                     {
 
