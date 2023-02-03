@@ -9,7 +9,7 @@ import Shorts from "../pages/shorts";
 import Watchlist from "../pages/watchlist";
 
 const publicRoutes = [
-  { path: "/", component: Home },
+  { path: "/", component: Shorts },
   { path: "/play", component: Play },
   { path: "/search", component: Search },
   { path: "/detail", component: Detail },
