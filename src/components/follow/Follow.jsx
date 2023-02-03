@@ -12,7 +12,7 @@ const Follow = () => {
                     !follow
                         ?
                         {
-                            color: "#F44336", border: "2px solid #F44336", transition: "all 0.5s"
+                            color: "#04DB41", border: "2px solid #04DB41", transition: "all 0.5s"
                         }
                         :
                         {
