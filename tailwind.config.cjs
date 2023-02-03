@@ -5,16 +5,14 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: '6rem',
-        }
+      colors: {
+        'forDark': '#10111A',
       },
-      
     },
   },
   plugins: [
     require('@tailwindcss/line-clamp'),
+    require('tailwind-scrollbar'),
+    require('tailwind-scrollbar')({ nocompatible: true }),
   ],
 };

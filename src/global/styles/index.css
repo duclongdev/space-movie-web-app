@@ -1,8 +1,7 @@
 @tailwind base;
 @layer base {
-  body{
-    @apply dark:bg-[#121212] bg-white;
+  body {
+    @apply dark:bg-forDark bg-white;
     @apply text-sm;
   }
 }
-

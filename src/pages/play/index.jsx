@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { Navigation } from "swiper";
 import My_Swiper from "./swiper";
 import My_Recommend from "./recommend_swiper"
 
@@ -14,6 +12,8 @@ import "./style.css"
 import TopList from "./topList";
 import Comments from "./comments";
 import TitleBar from "./titleBar";
+import { curValue } from "./swiper";
+import EpisodesList from "./episodesList";
 
 const Play = () => {
   const [showMore, setShowMore] = useState(false);
@@ -21,18 +21,16 @@ const Play = () => {
   const episode = "Episode";
 
   return (
-    // <div className="bg-slate-900">Play</div>
-
-    <div className="container mx-auto pt-4">
-      <div className="grid grid-cols-4 gap-5 mb-4">
+    <div className="container pt-20 pl-10 pr-14">
+      <div className="grid grid-cols-4 gap-y-4 mb-4">
         <div className="col-span-3">
-          <video width="100%" height="100%" controls>
-            <source src="" type="video/mp4" />
+          <video width="100%" height="100%" controls className="rounded-l-md">
+            <source src="https://dr.sf-converter.com/download?id=76eba88bd281618665d93f75e315136f4e81475b93bc1b18242273eea928bf20&payload=1*eJzVVltv4jgU%2FisIaaxdacLEdq6VrFGglEILlHJJ6QsKiQmGXEyuhFH%2F%2Bzihu53V7sus9mFHQp8dO8fnnO8cf%2BFbO43zxKXLJGjftPdZxtObL1%2FKsuxUcZ7lW9px4%2FBL6WTu%2FmtBLP4S28Wuv14t25%2FfLYfeTxs6ucfiv3pMEl2SpDSSjNNBYmp8STp%2BHPsBLZhH4%2BasZsYDp9o67vErPXOWUAI1TdMNTdYNQBkpUnW9Ngfd7u7kF97w6UztWLaGgHGCEOogFXWw3EGKCphHYskaPHbD8SD0xxN73VeDnaKfxnDQx0Fp%2BI%2BjhzvZ1ha9h%2F10R28ByxyfQEUG17TJe5ogoadcRJKmAaloCsI9UWcgDAmGn1APmSCMyI9picWPx0AHYUqcXCwmXg7CgoQCGNEBDwjCgLshIlEMfDchRQRYxDK3jLwtTwk0ZaTKIhrukuoZFbwq015pFGlhvVpn5L8qmzRy7O196YKCJwWBIGQhJQ33n9BdyBUQpWSzthH31zNn6EVzvLUH9JhUmqDMZ0mTjxvQiCANGhDpwMsTwTjs6EgDQZiJuSorhqrrGoYyxsJFdq2IpsiGCXaFIN4AR0q5E7CCNgfuROUIUmQZYh3XFImpjhQNuMTud0EmdhUVIwWL%2BMhws0VVFCPL2AUHSyTrJI5g7Fp8YUyZAMZr8GoQNaoJbipUk%2FpnbcRDTaYYBJf1K9wVWBMjhpoYMURpvc3q7TprMYh8BYpMQfCH63BfG4Q11G%2BEtU3YHFLUsfDa0w91EobMJ9YA9zZnq3yeDffWQzan2t2scPvbTdhbRKlDF2foBFnSc1eatB4XyvT5sF2%2BeEOLdcOzzvXY4dFsMI%2FdJcwDuDagQm%2Bfs8UUjV5m5%2BPQM%2BfL0iw%2F4VvxA43D6UmejYzaoT%2Fnnh9tFql3u7%2BrinwUb6ZPcWpLS76oXP7oQHWSp85qzRW3N5zdHkZV4p%2F1k28f1dd5po25qs%2FMbqCW6kDpXu4Ue3OR5OQ4tv2rQ3Ghm6v5a15orAGnnokbhet2hFhpUG1Qa1CvUZObZkUNXhtXaVBv0KhRrxGbSoNqg1qDeoPXXfMXV5CmbD%2BrIBAjzTSVDwnRNPghISaC0BRgQPzfSYj6ryTk2gz%2FexGZ3scrCLlsMCM9modEWrsvprpKLwrTn9B2cYoPkzI%2FdV%2BXhcWsQrcdbaUaE3iXq15N5PG0M2Vm4wD3u5vTNjG6WBqMNs7sn0TEFw4nCbz4czO7PO5GFTcC7%2Fk0VoIH9Gz0Dk84X0eXmbcz1Op2fW%2BxvlU94hwfnYkUDPBiOLUz7i%2FoJM9ejp41zleXQKoyaXvfn%2BXKVUIylgVU6IeQpqw1doI4op9b89KhrUdKW1Jrnke7IC5p0vptzkUHJtLYiaTWMMriVranrffFFU1S%2Brs471rf1MraNx%2BS8rnN0l6cR1lSdVnkschv32RJTt%2F%2FksybkrdvvrXrJhDBiM99%2B%2B1d3v6%2BibX229t3Fl%2F1LA%3D%3D*1666764479*b276b51b4c7b60f4" type="video/mp4" />
           </video>
         </div>
 
         {/* khung episode */}
-        <div>
+        <div className="bg-gray-200 w-[104%] pl-4 dark:bg-slate-700 rounded-r-md">
           <a
             href=""
             className="no-underline my-4 font-bold uppercase text-xl hover:text-green-500 block dark:text-white">
@@ -44,6 +42,8 @@ const Play = () => {
           </h2>
 
           <My_Swiper />
+
+          <EpisodesList choice={curValue} />
         </div>
 
         <div className="information col-span-3 dark:text-white">
@@ -103,7 +103,7 @@ const Play = () => {
 
             <div className="w-full border rounded relative hover:border-green-500 dark:border-gray-400">
               <div className="px-[12px] pt-[12px] pb-[30px]">
-                <textarea placeholder="Post a comment" cols="1" rows="1" className="resize-none bg-none h-9 w-full dark:bg-slate-800"></textarea>
+                <textarea placeholder="Post a comment" cols="1" rows="1" className="resize-none bg-none h-9 w-full dark:bg-slate-800 outline-0"></textarea>
               </div>
               <span className="absolute right-3 bottom-2 text-xs text-gray-500 ">0/280</span>
             </div>

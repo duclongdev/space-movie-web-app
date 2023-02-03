@@ -63,20 +63,19 @@ const TopList = () => {
           let para1 = "font-bold text-gray-500 text-sm mr-3";
           if (index == 0 || index == 1 || index == 2) para1 = "font-bold text-sm mr-3 text-green-500";
 
-          let para2;
-          let para3 = "list-item p-2 rounded m-1";
+          let para2, para3;
 
-          {hoverIndex === index ? para2 = "ml-[22px] rounded mb-2" : para2 += " hidden"}
-          {hoverIndex === index ? para3 += " bg-gray-300" : para3 = "list-item p-2 rounded m-1 "}
+          {hoverIndex === index ? para2 = "ml-[22px] rounded mb-2 mt-1" : para2 += " hidden"}
+          {hoverIndex === index ? para3 = "list-item p-2 rounded m-1 bg-slate-200 dark:bg-slate-700" : para3 = "list-item p-2 rounded m-1"}
 
           return (
-            <li id={index} key={index} className="list-item p-2 rounded m-1" onMouseOver={() => setHoverIndex(index)}>
+            <li id={index} key={index} className={para3} onMouseOver={() => setHoverIndex(index)}>
                 <a className="text-gray-600 font-medium dark:text-gray-300">
                     <div className="flex">
                         <span className={para1}>{index + 1}</span>
                         <span className="line-clamp-1">{value.filmName}</span>
                     </div>
-                    
+
                     <img src={value.image} alt="" className={para2} />
                 </a>
             </li>

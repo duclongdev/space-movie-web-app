@@ -1,0 +1,17 @@
+.modalBackground {
+    width: 100%;
+    height: calc(100vh - 4rem);
+    background-color: rgba(0, 0, 0, 0.35);
+    position: fixed;
+  }
+  
+  .modalContainer {
+    width: 50%;
+    border-radius: 12px;
+    background-color: #272831;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 16px;
+    position: absolute;
+    right: 42.5%;
+    top: 10%;
+  }
