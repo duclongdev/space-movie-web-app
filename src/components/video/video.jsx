@@ -49,9 +49,9 @@ const Video = ({ srcImg, name, type, id, vid, index }) => {
     }, [isVisibile])
 
     return (
-        <div key={index} className='max-w[600px] snap-start border-b-2 border-gray-600 pb-10 pt-16'>
+        <div key={index} className='max-w[600px] snap-start border-b-2 border-gray-600 border-opacity-30 pb-10 pt-16'>
             <div>
-                <div className='flex flex-row justify-between'>
+                <div className='flex justify-between relative right-10'>
                     <img className="w-[50px] h-[50px]" src={srcImg} alt="" />
                     <div>
                         <p className="text-xl font-bold hover:underline cursor-pointer dark:text-white">{name}</p>

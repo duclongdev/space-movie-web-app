@@ -17,8 +17,8 @@ const Header = () => {
     <div
       className={
         isScrolled
-          ? "flex flex-row place-content-between px-14 py-2 w-full fixed z-20 bg-white dark:bg-slate-800 "
-          : "flex flex-row place-content-between px-14 py-2 w-full fixed z-20 bg-gradient-to-b from-slate-800"
+          ? "flex flex-row place-content-between px-14 py-2 w-full fixed z-20 bg-white dark:bg-[#121212] "
+          : "flex flex-row place-content-between px-14 py-2 w-full fixed z-20 bg-gradient-to-b from-[#121212]"
       }
     >
       <div className="flex flex-row">

@@ -19,7 +19,7 @@ const Like = () => {
                             }
                             :
                             {
-                                color: "red", transition: "all 0.5s"
+                                color: "#F44336", transition: "all 0.5s"
                             }
                     }
                 />
