@@ -43,7 +43,7 @@ const Watchlist = () => {
 
           {/* Button */}
           <div className="flex my-6">
-            <button className="flex px-4 py-1 rounded font-medium" 
+            <button className="flex px-4 py-2 rounded font-medium" 
               onClick={() => {setCurrentPage(1); setStatus(1)}}
               style={{backgroundColor: status === 1 ? '#EBE910' : '#04DB41'}}
               >
@@ -51,7 +51,7 @@ const Watchlist = () => {
               <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" className="ml-2"><path d="M13 13v8h6q.825 0 1.413-.587Q21 19.825 21 19v-6Zm0-2h8V5q0-.825-.587-1.413Q19.825 3 19 3h-6Zm-2 0V3H5q-.825 0-1.413.587Q3 4.175 3 5v6Zm0 2H3v6q0 .825.587 1.413Q4.175 21 5 21h6Z"/></svg>
             </button>
 
-            <button className="flex px-4 py-1 rounded font-medium ml-4" 
+            <button className="flex px-4 py-2 rounded font-medium ml-4" 
               onClick={() => {setCurrentPage(2); setStatus(2)}}
               style={{backgroundColor: status === 2 ? '#EBE910' : '#04DB41'}}
               >
