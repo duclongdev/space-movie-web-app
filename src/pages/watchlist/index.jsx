@@ -86,7 +86,7 @@ const Watchlist = () => {
                 </div>
                 <hr className="my-4 opacity-30"/>
                 <div className="overflow-y-scroll" style={{height: '170px'}}>
-                  <p className="opacity-70 text-justify text-base">{currentFilm.content}</p>
+                  <p className="opacity-70 text-justify text-base mr-2">{currentFilm.content}</p>
                 </div>
               </div>
 

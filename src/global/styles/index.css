@@ -3,5 +3,6 @@
   body {
     @apply dark:bg-forDark bg-white;
     @apply text-sm;
+    @apply font-sans;
   }
 }

@@ -73,7 +73,7 @@ export default function RankPage({ callback }) {
 
   return (
     <div className="overflow-y-auto flex-1">
-      <div className="col-span-8">
+      <div className="col-span-8 mr-2">
         <div className="mb-8">
           <div className="flex items-center mb-2">
             <img src={hot} alt="" className="w-7 h-7" />

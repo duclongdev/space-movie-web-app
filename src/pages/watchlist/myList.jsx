@@ -5,7 +5,7 @@ import React, { useState } from "react";
 export default function MyList({ callback, data }) {
   return (
     <div className="overflow-y-auto flex-1">
-      <div className="col-span-8">
+      <div className="col-span-8 mr-2">
         <div className="grid grid-cols-3 gap-8">
           {data.map((value, index) => {
             return (
