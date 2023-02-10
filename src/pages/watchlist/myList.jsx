@@ -24,7 +24,7 @@ export default function MyList({ callback, data }) {
                     {value.title}
                   </h4>
                   <p className="text-base text-[#F9E492]">{value.author}</p>
-                  <p className="text-base">{value.genre}</p>
+                  <p className="text-base opacity-70">{value.genre}</p>
                   <div className="flex text-base">
                     <p className="mr-1">Current episode:</p>
                     <p className="text-[#F9E492]">{value.currentEps}</p>
