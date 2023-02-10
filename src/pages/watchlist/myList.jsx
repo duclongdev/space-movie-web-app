@@ -5,7 +5,7 @@ import React, { useState } from "react";
 export default function MyList({ callback, data }) {
   return (
     <div className="overflow-y-auto flex-1">
-      <div className="col-span-8">
+      <div className="col-span-8 mr-2">
         <div className="grid grid-cols-3 gap-8">
           {data.map((value, index) => {
             return (
@@ -24,7 +24,7 @@ export default function MyList({ callback, data }) {
                     {value.title}
                   </h4>
                   <p className="text-base text-[#F9E492]">{value.author}</p>
-                  <p className="text-base">{value.genre}</p>
+                  <p className="text-base opacity-70">{value.genre}</p>
                   <div className="flex text-base">
                     <p className="mr-1">Current episode:</p>
                     <p className="text-[#F9E492]">{value.currentEps}</p>
