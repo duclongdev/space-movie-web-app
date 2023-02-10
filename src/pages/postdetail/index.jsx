@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Card from "../post/card";
 
 const Header = () => {
   return (
@@ -19,8 +20,8 @@ const Header = () => {
           alt=""
           className="w-14 h-14 rounded-full"
         />
-        <div className="ml-4">
-          <h3 className="text-white">Huskywannafly</h3>
+        <div className="ml-4 flex flex-col justify-center ">
+          <h3 className="text-white font-semibold text-base">Huskywannafly</h3>
           <span className="text-gray-500">21 tháng 1</span>
         </div>
       </div>
@@ -31,7 +32,7 @@ const Header = () => {
 const Body = () => {
   return (
     <div className="text-white text-xl">
-      <p className="mt-6">
+      <p className="mt-6 mb-4">
         Dịch từ bài chia sẻ của nhà văn Tettyo Saito được đăng lại bằng tiếng
         Anh trên website Archyde. Người dịch có sửa lại văn phong ở một số chỗ
         để cho phù hợp với độc giả Việt Nam. Tiêu đề bài viết do người dịch đặt.
@@ -178,8 +179,7 @@ const Body = () => {
 
 const Footer = () => {
   return (
-    <div className="text-white text-xl">
-      <div className="h-[1px] bg-gray-500"></div>
+    <div className="text-white text-xl flex justify-between">
       <div className="flex flex-row mt-2">
         <svg
           _ngcontent-serverApp-c37=""
@@ -188,6 +188,7 @@ const Footer = () => {
           viewBox="0 0 17 15"
           xmlns="http://www.w3.org/2000/svg"
           className="mr-2 mt-[3px]"
+          fill="white"
         >
           <path
             _ngcontent-serverApp-c37=""
@@ -203,6 +204,7 @@ const Footer = () => {
           viewBox="0 0 17 15"
           xmlns="http://www.w3.org/2000/svg"
           className="ml-4 mr-2 mt-[3px]"
+          fill="white"
         >
           <path
             _ngcontent-serverApp-c37=""
@@ -211,6 +213,24 @@ const Footer = () => {
           ></path>
         </svg>
         6715 lượt xem
+      </div>
+      <div className="flex justify-center items-center">
+        <svg
+          _ngcontent-serverApp-c37=""
+          id="Layer_1"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 500 500"
+          height="25"
+          width="25"
+          fill="white"
+        >
+          <path
+            _ngcontent-serverApp-c37=""
+            d="M475,251.36c0-124.29-100.71-225-225-225S25,127.07,25,251.36c0,112.3,82.28,205.39,189.84,222.28V316.4H157.69v-65h57.15V201.79c0-56.39,33.57-87.53,85-87.53,24.62,0,50.37,4.39,50.37,4.39V174H321.82c-27.95,0-36.66,17.35-36.66,35.14v42.23h62.4l-10,65H285.16V473.64C392.72,456.75,475,363.66,475,251.36Z"
+            class="cls-1"
+          ></path>
+        </svg>
       </div>
     </div>
   );
@@ -344,7 +364,7 @@ const InfoUser = () => {
                 class="cls-1"
               ></path>
             </svg>
-            <span className="text-white text-lg">9</span>
+            <span className="text-white text-lg">2</span>
             <svg
               _ngcontent-serverApp-c37=""
               xmlns="http://www.w3.org/2000/svg"
@@ -366,20 +386,191 @@ const InfoUser = () => {
   );
 };
 
+const Info = () => {
+  return (
+    <div className="text-white mt-5 flex justify-between">
+      <div className="flex flex-row">
+        <img
+          src="https://images.spiderum.com/sp-xs-avatar/dc5284506efd11edaa12915a4c0043eb.jpeg"
+          alt=""
+          className="w-12 h-12 rounded-full"
+        />
+        <div className="mx-4">
+          <h1 className="text-base font-medium">Huskywannafly</h1>
+          <spann className="text-gray-400">@Huskywannafly</spann>
+        </div>
+        <div className="flex justify-center items-center ml-10 hover:text-green-500 cursor-pointer ">
+          <span className="px-4 py-2 border-[1px] rounded-lg hover:border-green-500">
+            Theo dõi
+          </span>
+        </div>
+      </div>
+      <div className="flex flex-row">
+        <div className="mx-4">
+          <h1 className="text-base font-medium">Quan điểm tranh luận</h1>
+          <spann className="text-gray-400">/quan-diem-tranh-luan</spann>
+        </div>
+        <div className="flex justify-center items-center ml-10 hover:text-green-500 cursor-pointer">
+          <span className="px-4 py-2 border-[1px] rounded-lg hover:border-green-500">
+            Theo dõi
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const User = ({ name, uri }) => {
+  return (
+    <div className="flex flex-row">
+      <img src={uri} alt="" className="w-12 h-12 rounded-full" />
+      <div className="mx-4">
+        <h1 className="text-base font-medium">{name}</h1>
+        <spann className="text-gray-400">29 tháng 1</spann>
+      </div>
+    </div>
+  );
+};
+
 const Comment = () => {
-  return <div>asdjf</div>;
+  return (
+    <div className="text-white w-3/6 m-auto border-grey-500 border-[0.5px] p-6 rounded-md">
+      <div className="flex flex-row justify-between">
+        <span className="text-gray-500">
+          Chia sẻ cảm nghĩ của bạn về bài viết
+        </span>
+        <span>Gửi</span>
+      </div>
+      <div className="h-[1px] bg-gray-500 my-6 "></div>
+      <div className="flex justify-end">
+        <div>
+          <span className="text-green-500 text-base cursor-pointer hover:underline ">
+            Mới nhất
+          </span>
+          <span className="text-base  ml-6 cursor-pointer hover:underline">
+            Hót nhất
+          </span>
+        </div>
+      </div>
+      <div className="p-4">
+        <User
+          name={"HelloIamDog"}
+          uri="https://www.gravatar.com/avatar/5824e6c221f792ec926a393e9dbb1a2d?d=wavatar&f=y"
+        />
+        <p>
+          Quan điểm của bạn đưa ra rất đúng. Nhưng lối viết của bạn còn hơi, um,
+          hơi chưa ổn lắm, nếu bạn viết câu chuyện sinh động hơn một xíu!? Mình
+          cũng đồng tình với quan điểm của bạn: Bạn tốt không phải là đúng theo
+          chuẩn mực xã hội, mà là khi ta cảm thấy thoải mái và vui vẻ khi ở bên,
+          tôn trọng, hiểu, và cảm thông cho câu chuyện ta mới gọi là bạn. Còn
+          việc tốt hay xấu là quan điểm của mỗi người. Mình nghĩ chúng ta cần
+          học cách nhìn nhận thế giới theo góc nhìn đa chiều, để hiểu cho từng
+          hoàn cảnh, chứ không nên áp đặt sự "tốt" và sự "xấu" lên ai đó một
+          cách thái quá. Rất cảm ơn bạn vì bài viết!
+        </p>
+
+        <div className="flex flex-row mt-6">
+          <div className="w-[0.8px] h-20 bg-gray-500 mx-8"></div>
+          <div className="">
+            <User
+              name="Huskywannafly"
+              uri="https://images.spiderum.com/sp-xs-avatar/dc5284506efd11edaa12915a4c0043eb.jpeg"
+            />
+            <p className="mt-4">
+              <span className="font-semibold">@HelloIamDog</span> Cảm ơn nhận
+              xét của bạn. Mình sẽ cố gắng cải thiện ^^
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const data = [
+  {
+    uri: "https://images.spiderum.com/sp-images/026a42708ab611e98ff8d33e798018d0.png",
+    timeToRead: "6 phút đọc",
+    title: "Anime/manga master racing Boy",
+    cataLog: "Phim",
+    user: {
+      uri: "https://images.spiderum.com/sp-xs-avatar/d54c4a20e70c11e79a70e3f8635a1288.jpg",
+      name: "loveless",
+    },
+  },
+  {
+    uri: "https://images.spiderum.com/sp-images/f1d1e2507f1b11eaa9dcb3364a58500c.jpg",
+    timeToRead: "4 phút đọc",
+    title: "[Anime] Ngọn đồi hoa hồng anh",
+    user: {
+      uri: "https://images.spiderum.com/sp-xs-avatar/43fbae207cd411ea8541ffe0871b33b1.jpg",
+      name: "Kaze",
+    },
+    cataLog: "Cảm nhận",
+  },
+  {
+    uri: "https://images.spiderum.com/sp-images/598a0ae0ee3011e88e239b783652d11c.jpg",
+    timeToRead: "8 phút",
+    title: "Các Loại Figure Anime Manga Nhật Bản",
+    cataLog: "Quan điểm",
+    user: {
+      uri: "https://images.spiderum.com/sp-xs-avatar/e55236a0e23311e8894e8116c15c1915.jpg",
+      name: "Huỳnh Đức Trí",
+    },
+  },
+];
+
+const Other = () => {
+  return (
+    <div className=" w-3/5 m-auto text-white relative">
+      <h1>Các bài viết nổi bật</h1>
+      <div className="border-[0.3px] flex justify-between px-6 py-4">
+        {data.map((item, index) => {
+          return (
+            <div key={index}>
+              <Card data={item} />
+            </div>
+          );
+        })}
+      </div>
+      <div className="absolute right-[-20px] top-1/3 py-10 px-3 bg-gray-400 opacity-90 rounded-sm hover:bg-gray-500">
+        <svg
+          _ngcontent-serverApp-c37=""
+          width="15"
+          height="24"
+          viewBox="0 0 15 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            _ngcontent-serverApp-c37=""
+            d="M2.8125 0L14.8125 12L2.8125 24L0 21.1875L9.1875 12L0 2.8125L2.8125 0Z"
+            fill="white"
+            class="cls-1"
+          ></path>
+        </svg>
+      </div>
+    </div>
+  );
 };
 
 const PostDetail = () => {
   const [showComment, setShowComment] = useState(false);
   return (
-    <div className="w-3/6 m-auto">
-      <InfoUser />
-      <Header />
-      <Body />
-      <Footer />
-      <BackToTop />
-      <div className="h-40"></div>
+    <div>
+      <div className="w-3/6 m-auto">
+        <InfoUser />
+        <Header />
+        <Body />
+        <div className="h-[1px] bg-gray-500 my-6"></div>
+        <Footer />
+        <BackToTop />
+        <Info />
+        <div className="h-10"></div>
+      </div>
+      <Other />
+      <div className="h-10"></div>
+      <Comment />
+      <div className="h-10"></div>
     </div>
   );
 };

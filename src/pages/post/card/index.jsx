@@ -1,25 +1,21 @@
 import React from "react";
 
-const Info = () => {
+const Info = ({ data }) => {
   return (
     <div className="flex">
-      <img
-        src="https://images.spiderum.com/sp-xs-avatar/001befb0738b11e98bc52d654e80e4ac.jpg"
-        alt=""
-        className="w-6 h-6 rounded-full"
-      />
-      <span className="ml-4">họ và tên</span>
+      <img src={data.uri} alt="" className="w-6 h-6 rounded-full" />
+      <span className="ml-4">{data.name}</span>
       <span className="ml-4  text-gray-400">
-        <li>21 th 1</li>
+        <li>{data.time}</li>
       </span>
     </div>
   );
 };
 
-const Option = () => {
+const Option = ({ data }) => {
   return (
     <div className="flex justify-between mt-2 mb-4">
-      <span className="text-gray-400">12 phút đọc</span>
+      <span className="text-gray-400">{data}</span>
       <div className="flex">
         <div>
           <svg
@@ -58,20 +54,15 @@ const Option = () => {
   );
 };
 
-const Card = () => {
-  const title = "Viết Cho Năm 2022: Biết Về Thứ Gì Đó và Biết Thứ Gì Đó";
+const Card = ({ data }) => {
   return (
     <div className="w-[280px] text-white mb-6">
-      <img
-        src="https://images.spiderum.com/sp-images/4e5c789099a511ed81f0130d59e74ef4.png"
-        alt=""
-        className="h-44 w-[280px] rounded-md"
-      />
-      <Option />
+      <img src={data.uri} alt="" className="h-44 w-[280px] rounded-md" />
+      <Option data={data.timeToRead} />
       <h3 className="text-xl font-medium mb-4">
-        {title.length > 52 ? title.slice(0, 52) + "..." : title}
+        {data.title.length > 52 ? data.title.slice(0, 52) + "..." : data.title}
       </h3>
-      <Info />
+      <Info data={data.user} />
     </div>
   );
 };
