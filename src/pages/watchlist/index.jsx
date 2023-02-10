@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRankingStar, faPlay, faFilm, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import OnePiece from '../../assets/image/OnePiece.png';
 import Boruto from '../../assets/image/Boruto.png';
 import Spy from '../../assets/image/SpyX.png';
@@ -30,32 +30,42 @@ const Watchlist = () => {
   const [status, setStatus] = useState(1);
   const [currentLikeList, setCurrentLikeList] = useState([]);
   const [openModal, setOpenModal] = useState(false);
+  const [isHover1, setIsHover1] = useState(false);
+  const [isHover2, setIsHover2] = useState(false);
 
   return (
     <div className="container pt-16 mx-auto pl-[3.5rem]">
       <div className="grid grid-cols-12 gap-2">
         <div className="col-span-8 flex flex-col relative" style={{height: 'calc(100vh - 4rem)'}}>
           <div className="flex items-end justify-between">
-            <h2 className="text-white font-semibold text-5xl">Watchlist</h2>
+            <h2 className="text-white font-bold text-5xl">Watchlist</h2>
             <p className="text-white/70">All your movies in one place</p>
           </div>
           <hr className="opacity-30 mt-4" />
 
           {/* Button */}
           <div className="flex my-6">
-            <button className="flex px-4 py-2 rounded font-medium" 
+            <button className="flex px-4 py-2 rounded font-bold items-center justify-center" 
               onClick={() => {setCurrentPage(1); setStatus(1)}}
-              style={{backgroundColor: status === 1 ? '#EBE910' : '#04DB41'}}
+              onMouseEnter={() => setIsHover1(true)}
+              onMouseLeave={() => setIsHover1(false)}
+              style={{
+                backgroundColor: status === 1 ? '#FFFF00' : '#01FF45' && isHover1 ? '#4DFF7C' : '#01FF45'
+              }}
               >
-              Mylist
+              <p>Mylist</p>
               <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" className="ml-2"><path d="M13 13v8h6q.825 0 1.413-.587Q21 19.825 21 19v-6Zm0-2h8V5q0-.825-.587-1.413Q19.825 3 19 3h-6Zm-2 0V3H5q-.825 0-1.413.587Q3 4.175 3 5v6Zm0 2H3v6q0 .825.587 1.413Q4.175 21 5 21h6Z"/></svg>
             </button>
 
-            <button className="flex px-4 py-2 rounded font-medium ml-4" 
+            <button className="flex px-4 py-2 rounded font-bold items-center justify-center ml-4" 
               onClick={() => {setCurrentPage(2); setStatus(2)}}
-              style={{backgroundColor: status === 2 ? '#EBE910' : '#04DB41'}}
+              onMouseEnter={() => setIsHover2(true)}
+              onMouseLeave={() => setIsHover2(false)}
+              style={{
+                backgroundColor: status === 2 ? '#FFFF00' : '#01FF45' && isHover2 ? '#4DFF7C' : '#01FF45'
+              }}
               >
-              Rank
+              <p>Rank</p> 
               <FontAwesomeIcon icon={faRankingStar} className="fa-xl ml-2"/>
             </button>
           </div>
@@ -71,26 +81,28 @@ const Watchlist = () => {
               <div className="pt-4 px-5">
                 <h4 className="font-bold text-2xl line-clamp-1">{currentFilm.title}</h4>
                 <div className="flex space justify-between text-base mt-2">
-                  <p className=" text-[#C7BA89]">{currentFilm.author}</p>
+                  <p className=" text-[#F9E492]">{currentFilm.author}</p>
                   <p className="opacity-70">{currentFilm.genre}</p>
                 </div>
                 <hr className="my-4 opacity-30"/>
-                <p className="opacity-70 text-justify text-sm">{currentFilm.content}</p>
+                <div className="overflow-y-scroll" style={{height: '170px'}}>
+                  <p className="opacity-70 text-justify text-base">{currentFilm.content}</p>
+                </div>
               </div>
 
               <div className="font-semibold absolute bottom-0 w-full">
-                <div className="px-5 mb-2">
+                <div className="px-5 mb-5">
                   <div className="flex gap-x-2">
                     <p>Current episode: </p>
-                    <p className="text-[#C7BA89]">{currentFilm.currentEps}</p>
+                    <p className="text-[#F9E492]">{currentFilm.currentEps}</p>
                   </div>
 
                   <p>Full 500 episodes</p>
                 </div>
 
                 {/* Like button */}
-                <div className="bg-[#272831] flex font-medium text-black items-center py-3 px-9 justify-between text-base">
-                  <button className="text-white hover:text-[#FF9513]" onClick={() => {
+                <div className="bg-[#2D2E37] flex font-medium text-black items-center py-3 px-9 justify-between text-base">
+                  <button className="text-white hover:text-[#FF9D00]" onClick={() => {
                     if(currentLikeList.includes(currentFilm.id)) {
                       setCurrentLikeList((prev) => {
                         var id = prev.indexOf(currentFilm.id);
@@ -108,8 +120,8 @@ const Watchlist = () => {
                   }}>
                     {currentLikeList.includes(currentFilm.id) ? 
                       <div>
-                        <FontAwesomeIcon icon={faHeart} className="text-xl text-[#FF9513]"/> 
-                        <p className="text-[#FF9513]">Like</p>
+                        <FontAwesomeIcon icon={faHeart} className="text-xl text-[#FF9D00]"/> 
+                        <p className="text-[#FF9D00]">Like</p>
                       </div>
                       : 
                       <div>
@@ -118,16 +130,16 @@ const Watchlist = () => {
                       </div>
                     }
                   </button>
-                  <Link className="rounded-lg py-2 px-8 bg-[#04DB41] flex justify-center items-center space-x-3 hover:bg-[#86EFAC]"
+                  <Link className="rounded-lg py-2 px-8 bg-[#01FF45] flex justify-center items-center font-bold space-x-3 hover:bg-[#4DFF7C]"
                     to='/play'
                   >
                     <FontAwesomeIcon icon={faPlay} className="text-lg"/>
                     <p>Play</p>
                   </Link>
 
-                  <button className="text-white hover:text-[#FF9513]" onClick={() => setOpenModal(!openModal)}>
-                    <FontAwesomeIcon icon={faFilm} className="text-xl" color={openModal ? '#FF9513' : '#fff'}/>
-                    <p className={openModal ? 'text-[#FF9513] ': 'text-white'}>Trailer</p>
+                  <button className="text-white hover:text-[#FF9D00]" onClick={() => setOpenModal(!openModal)}>
+                    <FontAwesomeIcon icon={faFilm} className="text-xl" color={openModal ? '#FF9D00' : null}/>
+                    <p className={openModal ? 'text-[#FF9D00] ': null}>Trailer</p>
                   </button>
                 </div>
               </div>

@@ -10,7 +10,7 @@ export default function MyList({ callback, data }) {
           {data.map((value, index) => {
             return (
               <div
-                className="rounded-lg bg-[#272831] text-white hover:bg-[#4E4D54]"
+                className="rounded-lg bg-[#2D2E37] text-white hover:bg-[#4E4D54]"
                 key={index}
                 onClick={() => {callback(value);}}
               >
@@ -23,11 +23,11 @@ export default function MyList({ callback, data }) {
                   <h4 className="font-bold text-xl line-clamp-1">
                     {value.title}
                   </h4>
-                  <p className="text-base text-[#C7BA89]">{value.author}</p>
+                  <p className="text-base text-[#F9E492]">{value.author}</p>
                   <p className="text-base">{value.genre}</p>
                   <div className="flex text-base">
                     <p className="mr-1">Current episode:</p>
-                    <p className="text-[#C7BA89]">{value.currentEps}</p>
+                    <p className="text-[#F9E492]">{value.currentEps}</p>
                   </div>
                 </div>
               </div>
