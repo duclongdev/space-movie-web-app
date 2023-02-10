@@ -5,7 +5,7 @@ const Follow = () => {
     const [follow, setFollow] = useState(false)
     return (
         <div className='relative left-24'>
-            <button className='h-8 pl-4 pr-4 rounded-md font-bold w-[100px] text-[#F44336]'
+            <button className='h-8 pl-4 pr-4 rounded-md font-semibold w-[100px] text-[#F44336] hover:bg-gray-900'
                 onClick={() => setFollow(!follow)}
                 style=
                 {

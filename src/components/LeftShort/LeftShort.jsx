@@ -131,7 +131,7 @@ const LeftShort = () => {
                             <img src={value.img} alt="" className='w-[45px] h-[45px] rounded-full' />
                             <div className='ml-4'>
                                 <div className='flex'>
-                                    <p className='font-bold dark:text-white'>{value.account}</p>
+                                    <p className='font-semibold dark:text-white'>{value.account}</p>
                                     {
                                         value.id % 2 == 0
                                             ?
@@ -150,7 +150,7 @@ const LeftShort = () => {
                             <img src={value.img} alt="" className='w-[45px] h-[45px] rounded-full' />
                             <div className='ml-4'>
                                 <div className='flex'>
-                                    <p className='font-bold dark:text-white'>{value.account}</p>
+                                    <p className='font-semibold dark:text-white'>{value.account}</p>
                                     {
                                         value.id % 2 == 0
                                             ?
