@@ -30,10 +30,10 @@ const Play = () => {
         </div>
 
         {/* khung episode */}
-        <div className="bg-gray-200 w-[104%] pl-4 dark:bg-slate-700 rounded-r-md">
+        <div className="bg-gray-200 w-[104%] pl-4 dark:bg-[#2D2E37] rounded-r-md">
           <a
             href=""
-            className="no-underline my-4 font-bold uppercase text-xl hover:text-green-500 block dark:text-white">
+            className="no-underline my-4 font-bold uppercase text-xl hover:text-[#01FF45] block dark:text-white">
             BORUTO-NARUTO NEXT GENERATIONS
           </a>
 
@@ -50,19 +50,19 @@ const Play = () => {
           <TitleBar filmName="BORUTO-NARUTO NEXT GENERATIONS" episodes={episode + " 1"}/>
           
           <div className="flex font-medium text-l mt-[12px]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#00dc5a" className="w-5 h-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#01FF45" className="w-5 h-5">
               <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
             </svg>
-            <p className="font-bold text-[#00dc5a] mr-1">9.5</p>
+            <p className="font-bold text-[#01FF45] mr-1">9.5</p>
             
             <span className="mr-1">(71.7k ratings)</span>
             <span className="mr-1 text-gray-500">•</span>
-            <span className="text-green-500">Rate now</span>
+            <span className="text-[#01FF45]">Rate now</span>
           </div>
 
           <div className="flex">
             <div className="flex text-l mt-[14px] items-center font-semibold">
-              <span className="bg-[#00dc5a] px-1 rounded-l"> TOP 8</span>
+              <span className="bg-[#01FF45] px-1 rounded-l"> TOP 8</span>
               <span className="bg-gray-400 rounded-r px-1">Hot Anime</span>
 
               <div className="w-px h-5 border-1 text-gray-500 mx-2 border-slate-500 bg-slate-500"></div>
@@ -74,7 +74,7 @@ const Play = () => {
             </div>
 
             <div className="read-more-read-less w-[38%] mt-[14px]">
-                <button className='font-semibold flex items-center hover:text-[#00dc5a]' onClick={() => setShowMore(!showMore)} >
+                <button className='font-semibold flex items-center hover:text-[#01FF45]' onClick={() => setShowMore(!showMore)} >
                     <span>
                         {showMore ? 'Collapse' : 'More'}
                     </span>
@@ -101,7 +101,7 @@ const Play = () => {
           <div className="flex pt-6 pb-1">
             <img src="https://www.iqiyipic.com/common/fix/headicons/male-130.png" alt="" className="flex rounded-[50%] w-10 h-10 mr-[12px]"/>
 
-            <div className="w-full border rounded relative hover:border-green-500 dark:border-gray-400">
+            <div className="w-full border rounded relative hover:border-[#01FF45] dark:border-gray-400">
               <div className="px-[12px] pt-[12px] pb-[30px]">
                 <textarea placeholder="Post a comment" cols="1" rows="1" className="resize-none bg-none h-9 w-full dark:bg-slate-800 outline-0"></textarea>
               </div>

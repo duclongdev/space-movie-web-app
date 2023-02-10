@@ -48,7 +48,7 @@ const My_Recommend = () => {
     },
     {
       image:
-        "https://pic0.iqiyipic.com/image/20210317/01/b3/a_100448836_m_601_en_260_360.webp",
+        "https://pic0.iqiyipic.com/image/20210317/01/b3/a_100448836_m_601_en_260_360.jpg",
       filmName: "One Punch Man",
       totalEpisode: "24 Episodes",
       status: "Completed",
@@ -126,7 +126,7 @@ const My_Recommend = () => {
                       stroke="none"
                       strokeWidth="1"
                       fillRule="evenodd"
-                      className="fill-[#1CC749] hover:fill-green-400"
+                      className="fill-[#01FF45] hover:fill-green-400"
                     >
                       <circle
                         id="bg"
