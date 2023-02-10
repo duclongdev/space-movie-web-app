@@ -61,12 +61,12 @@ const TopList = () => {
       <ul>
         {data.map((value, index) => {
           let para1 = "font-bold text-gray-500 text-sm mr-3";
-          if (index == 0 || index == 1 || index == 2) para1 = "font-bold text-sm mr-3 text-green-500";
+          if (index == 0 || index == 1 || index == 2) para1 = "font-bold text-sm mr-3 text-[#01FF45]";
 
           let para2, para3;
 
           {hoverIndex === index ? para2 = "ml-[22px] rounded mb-2 mt-1" : para2 += " hidden"}
-          {hoverIndex === index ? para3 = "list-item p-2 rounded m-1 bg-slate-200 dark:bg-slate-700" : para3 = "list-item p-2 rounded m-1"}
+          {hoverIndex === index ? para3 = "list-item p-2 rounded m-1 bg-slate-200 dark:bg-[#2D2E37]" : para3 = "list-item p-2 rounded m-1"}
 
           return (
             <li id={index} key={index} className={para3} onMouseOver={() => setHoverIndex(index)}>

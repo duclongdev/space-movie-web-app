@@ -50,7 +50,7 @@ const My_Swiper = () => {
         {data.map((value, index) => {
           let classes = "focus:underline cursor-pointer font-semibold";
           if (index === current)
-            classes += " text-green-500 underline decoration-2";
+            classes += " text-[#01FF45] underline decoration-2";
           return (
             <SwiperSlide key={index}>
               <div className={classes} onClick={() => handleClick(index)}>

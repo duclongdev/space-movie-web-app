@@ -13,13 +13,13 @@ const TitleBar = ({ filmName, episodes}) => {
 
     return (  
         <div className="flex text-2xl font-bold">
-            <a className="cursor-pointer relative hover:text-green-500" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+            <a className="cursor-pointer relative hover:text-[#01FF45]" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                 <span className="uppercase text-2xl font-bold mr-1">
                     {filmName}
                 </span>
 
-                <span className="absolute inline-flex items-center bg-gradient-to-r from-white text-lg h-[100%] transition-style overflow-hidden dark:from-slate-800" style={{width : isHovering ? "120px" : "0px"}}>
-                    <span className="text-green-500 font-bold absolute text-lg top-1 ml-2">
+                <span className="absolute inline-flex items-center bg-gradient-to-r from-white text-lg h-[100%] transition-style overflow-hidden dark:from-[#10111A]" style={{width : isHovering ? "120px" : "0px"}}>
+                    <span className="text-[#01FF45] font-bold absolute text-lg top-1 ml-2">
                         more info
                     </span>
                     <svg
