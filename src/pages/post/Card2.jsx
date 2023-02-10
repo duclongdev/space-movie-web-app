@@ -18,9 +18,20 @@ const Info = () => {
     </div>
   );
 };
+
+import { useNavigate } from "react-router-dom";
 const Card2 = () => {
+  const navigate = useNavigate();
+  const move = () => {
+    navigate("/postdetail", {
+      replace: true,
+    });
+  };
   return (
-    <div className="flex flex-row my-6 text-white">
+    <div
+      className="flex flex-row my-6 text-white cursor-pointer"
+      onClick={move}
+    >
       <img
         src="https://images.spiderum.com/sp-thumbnails/3a6dc5e0a15811ed9e345b30468f0f20.jpg"
         alt=""
