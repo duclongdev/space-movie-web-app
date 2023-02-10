@@ -77,7 +77,7 @@ const LeftShort = () => {
     if (type === tabs[0].nameTab) {
       navigate("/short");
     } else if (type === tabs[1].nameTab) {
-      navigate("/postdetail");
+      navigate("/post");
     } else {
       navigate("/watchlist");
     }
