@@ -3,7 +3,7 @@ import React from 'react'
 const SeeMore = ({callback, isMore}) => {
     return (
         <>
-            <button className='text-green-500 font-bold pt-4 flex' onClick={()=>callback(!isMore)}>
+            <button className='text-[#01FF45] font-semibold pt-4 flex' onClick={()=>callback(!isMore)}>
                 <span>
                     {
                         isMore ? "See Less" : "See All"

@@ -77,7 +77,7 @@ const LeftShort = () => {
     if (type === tabs[0].nameTab) {
       navigate("/short");
     } else if (type === tabs[1].nameTab) {
-      navigate("/post");
+      navigate("/postdetail");
     } else {
       navigate("/watchlist");
     }
@@ -129,7 +129,9 @@ const LeftShort = () => {
               />
               <div className="ml-4">
                 <div className="flex">
-                  <p className="font-bold dark:text-white">{value.account}</p>
+                  <p className="font-semibold dark:text-white">
+                    {value.account}
+                  </p>
                   {value.id % 2 == 0 ? (
                     <FontAwesomeIcon
                       icon={faCircleCheck}
@@ -152,7 +154,9 @@ const LeftShort = () => {
               />
               <div className="ml-4">
                 <div className="flex">
-                  <p className="font-bold dark:text-white">{value.account}</p>
+                  <p className="font-semibold dark:text-white">
+                    {value.account}
+                  </p>
                   {value.id % 2 == 0 ? (
                     <FontAwesomeIcon
                       icon={faCircleCheck}
